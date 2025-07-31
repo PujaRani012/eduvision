@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script>
+  window.addEventListener('scroll', () => {
+    const quote = document.querySelector('.quote');
+    const image = document.querySelector('.svg-image');
+
+    const triggerPoint = window.innerHeight * 0.85;
+
+    if (quote.getBoundingClientRect().top < triggerPoint) {
+      quote.classList.add('quote-appear');
+    }
+
+    if (image.getBoundingClientRect().top < triggerPoint) {
+      image.classList.add('svg-appear');
+    }
+  });
+</script>
+<style>
+    /* Container Layout */
+.head-container {
+  margin-top: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+/* Quote Box Initial Hidden + Animation Style */
+.quote {
+  width: 600px;
+  transform: translateX(-100px); /* Initial slide from left */
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.quote-appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.quote p {
+  font-size: 55px;
+  color: #4e113de8;
+  font-weight: 510;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 65px;
+}
+
+.quote h5 {
+  margin-top: 10px;
+  color: rgba(116, 74, 99, 0.788);
+  line-height: 20px;
+  font-family: sans-serif;
+}
+
+.quote .play {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.quote .play img {
+  width: 65px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px rgba(209, 13, 13, 0.133));
+}
+
+.quote .play span a {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(1, 1, 54, 0.8);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* SVG Image Box Initial Hidden + Animation Style */
+.svg-image {
+  transform: translateX(100px); /* Initial slide from right */
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.svg-appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.svg-image img {
+  width: 580px;
+  max-width: 100%;
+  filter: drop-shadow(0 20px 10px #41153dc3);
+  padding-bottom: 17%;
+}
+</style>
+</head>
+<body>
+    <div class="head-container">
+			<div class="quote">
+				<p>Unlock Limitless Learning Anytime, Anywhere At Free!</p>
+				<h5>Welcome to EDUVISION, your gateway to limitless learning and professional growth! Here we provide a diverse range of courses tailored to meet your needs. Unlock your potential with the best online education experience available. Start exploring now and see how EDUVISIONan help you achieve your dreams!
+
+				</h5>
+				<div class="play">
+					<img src="images/icon/play.png" alt="play"><span><a href="https://youtu.be/CzP8Oo_Y9aA?si=t5vU0IQ5X8JHLo8D" target="_blank">Not Sure Where to Begin?</a></span>
+				</div>
+			</div>
+			<div class="svg-image">
+				<img src="image.png" alt="home picture">
+			</div>
+		</div>
+</body>
+</html>
