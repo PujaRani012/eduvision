@@ -86,7 +86,7 @@ nav ul li a:hover {
 .active {
   color: #ffffff;
   border-radius: 5px;
-  background: #d493a1f9;
+  /* background: #d493a1f9; */
 }
 
 .srch {
@@ -509,6 +509,7 @@ button {
   transform: translateX(100px);
   opacity: 0;
   transition: all 0.8s ease-in-out;
+  width:1500px;
 }
 
 .sideImage-appear {
